@@ -7,6 +7,28 @@
 # Time Series Data Exporter
 
 This project is designed to export time series data points from Google Cloud Monitoring and load them into a BigQuery table.
+## What it does?
+This project is designed to:
+- **Extract** time series data points from **Google Cloud Monitoring**, which is Google's service for monitoring, logging, and diagnostics within the Google Cloud Platform ecosystem.
+- **Transform** this data into a format suitable for analysis or further processing.
+- **Load** the transformed data into a **BigQuery table**. BigQuery is Google's fully managed, serverless data warehouse that enables super-fast SQL queries using the processing power of Google's infrastructure.
+
+### Key Features:
+- **Automated Data Export**: Automates the process of fetching data from Google Cloud Monitoring metrics.
+- **Data Transformation**: Handles the conversion of monitoring data into a structured format that aligns with BigQuery's schema requirements.
+- **Scheduled Jobs**: Supports setting up cron jobs or Cloud Scheduler for regular data updates.
+- **Scalability**: Designed to handle large volumes of data, making it suitable for enterprise-level applications.
+
+### Use Cases:
+- **Performance Monitoring**: Track application performance metrics over time, such as latency, error rates, or throughput.
+- **Resource Utilization**: Monitor CPU, memory, disk usage, etc., across your cloud resources to optimize costs and performance.
+- **Compliance and Reporting**: Aggregate data for compliance checks or to generate reports for business intelligence.
+
+### How It Works:
+1. **Authentication**: The tool uses Google Cloud's authentication mechanisms to access Google Cloud Monitoring data securely.
+2. **Data Fetching**: It queries Google Cloud Monitoring for specific metrics based on user-defined parameters (like time range, resource type, etc.).
+3. **Data Processing**: The raw data is transformed into a suitable format. This might involve filtering, aggregation, or formatting to match BigQuery's schema.
+4. **Data Loading**: The processed data is then uploaded to a pre-specified BigQuery table, where it can be easily queried or analyzed.
 
 ### Importance
 
