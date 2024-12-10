@@ -2,9 +2,11 @@
 
 ## Introduction
 
-### What it does?
+### About the project. 
 
-This project created to export time series data points from Google Cloud Monitoring and load it into Bigquery table.
+# Time Series Data Exporter
+
+This project is designed to export time series data points from Google Cloud Monitoring and load them into a BigQuery table.
 
 ### Why do I need it?
 
