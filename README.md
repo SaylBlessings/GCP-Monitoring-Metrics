@@ -8,7 +8,7 @@
 
 This project is designed to export time series data points from Google Cloud Monitoring and load them into a BigQuery table.
 
-### Why do I need it?
+### Importance
 
 The GCP Metric Exporter project created to address the following points:
 
@@ -17,7 +17,7 @@ The GCP Metric Exporter project created to address the following points:
 
 ### Architecture
 
-1) Cloud Scheduler - For each metric export we will create new cloud scheduler that contains the required information of the export job the message body and to manage the HTTP trigger.
+1) Cloud Scheduler - For each metric export I will create new cloud scheduler that contains the required information of the export job the message body and to manage the HTTP trigger.
 
 2) Cloud Function - This function is responsible for executing the export step using the information provided by the cloud scheduler and triggered by HTTP endpoint, and loading the data into the BigQuery.
 
@@ -30,7 +30,7 @@ The GCP Metric Exporter project created to address the following points:
 
 ## Prerequisite
 
-In order to run this project we'll need to have:
+In order to run this project there's a need to have:
 
 * [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
 * [gsutil](https://cloud.google.com/storage/docs/gsutil_install)
@@ -43,11 +43,11 @@ Please run the following command to install local Python dependencies:
 ## Installation
 
 ### Authentication
-Please authenticate with your user using the gcloud SDK by running the following command:
+Authenticate with your user using the gcloud SDK by running the following command:
 
 ```gcloud auth login```
 
-For more information please look at [gcloud auth login documentation](https://cloud.google.com/sdk/gcloud/reference/auth/login).
+For more information visit [gcloud auth login documentation](https://cloud.google.com/sdk/gcloud/reference/auth/login).
 
 ### Configure the Makefile parameters
 
@@ -174,7 +174,7 @@ On the new page, please enter the service account name (in blue), and for the ro
 
 Now please click on "ADD" and on "Done".
 
-For more information please look at [granting access to a dataset](https://cloud.google.com/bigquery/docs/dataset-access-controls#granting_access_to_a_dataset).
+For more information visit [granting access to a dataset](https://cloud.google.com/bigquery/docs/dataset-access-controls#granting_access_to_a_dataset).
 
 ### Cloud Scheduler Service account 
 Create the Cloud Scheduler service account:
@@ -194,7 +194,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
 ```
 
 ## Deploy
-<b> Please make sure that all the parameter in the makefile are correct before running the following.</b>
+<b> Make sure that all the parameter in the makefile are correct before running the following.</b>
 
 Now we are all set for deploy.
 
@@ -206,7 +206,7 @@ When you get the following question:
 
 ```Allow unauthenticated invocations of new function [metric_exporter]?```
 
-Please type "N" in order to prevent any unauthenticated invocation.
+type "N" in order to prevent any unauthenticated invocation.
 
 In case that you already have a Cloud Function, and you want to deploy on new export, please run the following command to deploy new cloud scheduler:
 
